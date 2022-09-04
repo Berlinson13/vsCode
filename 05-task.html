@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body>
+    <pre>
+        Задание:
+        Создайте функцию, которая принимает массив значений и возвращает массив с дублирующимися значениями или null если повторяющихся значений в массиве нет.
+    </pre>
+    <script>
+
+     
+
+      /*function dublicate()
+      { let mas =prompt("Введите масив чисел через запятую  ( , )").split(',');
+        let dub =[];
+        for (i=0;i<mas.length;i++){
+            for (k=0; k<mas.length; k++)
+           
+            if (mas[i]==mas[k]){
+            dub.push(mas[i]);
+            //k++;
+            i++;
+            //return dub;
+            
+            }
+           // else { dub=null}
+        }
+        return dub;
+      }*/
+//В даному завдані не розібрався
+
+
+      let mas =prompt("Введите масив чисел через запятую  ( , )").split(',');
+      function duplicate(a) {
+        
+        let j = 0;
+        let newArray = [];
+        for (let i = 0; i < a.length; i++) {
+            let item = a[i];
+            j = i + 1;
+            if (a.indexOf(item, j) !== -1) {
+                newArray.push(item);
+            }
+        }
+        if (newArray.length === 0) {
+            newArray = null;
+        }
+        return console.log(`Array with random values = [${a}].\nNew Array with duplicates =  [${newArray}].`);
+    }
+
+
+
+    let b = duplicate(mas); 
+     console.log(b);
+
+    </script>
+</body>
+</html>
